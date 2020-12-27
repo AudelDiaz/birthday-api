@@ -1,13 +1,11 @@
-from datetime import datetime
-from typing import List
-
-from fastapi import Depends, FastAPI, HTTPException
-from sqlalchemy.orm import Session
-
 import crud
 import models
 import schemas
 from database import SessionLocal, engine
+from datetime import datetime
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy.orm import Session
+from typing import List
 
 models.Base.metadata.create_all(bind=engine)
 
